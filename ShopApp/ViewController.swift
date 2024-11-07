@@ -64,10 +64,11 @@ extension ViewController: UITableViewDataSource {
         arrayCells.count
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return arrayCells[section].productList.count
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
@@ -83,9 +84,9 @@ extension ViewController: UITableViewDataSource {
     }
     
     
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return arrayCells[section].type.rawValue
-        
     }
     
 }
