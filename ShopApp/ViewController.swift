@@ -9,21 +9,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    //MARK: - Private Property
     private let shopManager = ShopManager()
     private var arrayCells:[Section] = []
     private let tableView = UITableView()
     private let cellIdentifier = "cell"
     
-    //
-    //    init(arrayCell: [Section]) {
-    //        self.arrayCell = arrayCell
-    //        super.init(nibName: nil, bundle: nil)
-    //    }
-    //
-    //    required init?(coder: NSCoder) {
-    //        fatalError("init(coder:) has not been implemented")
-    //    }
-    
+    //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -32,7 +25,7 @@ class ViewController: UIViewController {
     }
 }
 
-
+//MARK: - Methods
 extension ViewController {
     
     func setupView() {
@@ -47,6 +40,9 @@ extension ViewController {
     }
 }
 
+
+
+//MARK: - Layout
 extension ViewController {
     func setupLayout() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -61,6 +57,7 @@ extension ViewController {
 }
 
 
+//MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -84,7 +81,6 @@ extension ViewController: UITableViewDataSource {
         
         return cell
     }
-    
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
